@@ -12,6 +12,7 @@ export default function HomePage() {
   const handleReset = () => {
     setResult(null);
     setFormKey((prev) => prev + 1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
