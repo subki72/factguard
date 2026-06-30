@@ -84,7 +84,7 @@ export default function HomePage() {
                 Siap Menganalisis
               </h2>
               <p className="text-lg font-medium text-gray-700 leading-tight">
-                Masukkan teks, URL, atau gambar di sebelah kiri untuk melihat hasil penilaian objektivitas yang mendalam dan tajam.
+                Masukkan teks, URL, atau gambar untuk melihat hasil penilaian objektivitas yang mendalam dan tajam.
               </p>
             </div>
           )}
