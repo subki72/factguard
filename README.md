@@ -84,5 +84,4 @@ npm run dev
 ```
 Buka `http://localhost:3000` di browser Anda!
 
-## Lisensi
-Dikembangkan untuk membantu menciptakan iklim informasi politik yang lebih sehat dan objektif. Silakan *fork* dan kembangkan lebih lanjut!
+
