@@ -54,8 +54,8 @@ export default function Header() {
             <div className="w-12 h-12 bg-black flex items-center justify-center text-white border-[3px] border-black shadow-[4px_4px_0px_var(--primary)] group-hover:translate-x-[-2px] group-hover:translate-y-[-2px] group-hover:shadow-[6px_6px_0px_var(--primary)] transition-all">
               <ShieldCheck className="w-7 h-7" />
             </div>
-            <span className="text-2xl font-black uppercase tracking-tighter hidden sm:inline">
-              FactGuard
+            <span className="text-xl sm:text-2xl font-black uppercase tracking-tighter">
+              Cek Fakta
             </span>
           </Link>
 
