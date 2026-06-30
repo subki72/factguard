@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/main.py"
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/crawl",
+      "schedule": "0 1 * * *"
+    }
+  ]
+}

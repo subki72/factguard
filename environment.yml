@@ -1,0 +1,20 @@
+name: fakenews_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - fastapi==0.115.*
+      - uvicorn[standard]==0.34.*
+      - groq==0.25.*
+      - supabase==2.15.*
+      - httpx==0.28.*
+      - beautifulsoup4==4.13.*
+      - pydantic==2.11.*
+      - python-multipart==0.0.*
+      - python-dotenv==1.1.*
+      - ruff==0.11.*
+      - pytest==8.3.*
+      - pytest-asyncio==0.26.*

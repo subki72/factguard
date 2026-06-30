@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+:root {
+  /* Neo-Brutalism Color Palette */
+  --background: #f4f0ea; /* Off-white / light cream */
+  --foreground: #111111; /* Deep black for stark contrast */
+  --foreground-muted: #444444;
+  
+  /* Primary accents */
+  --primary: #3b82f6; /* Blue */
+  --accent: #facc15;  /* Yellow */
+  
+  /* Score / Stamp colors */
+  --score-objektif: #10b981; /* Green */
+  --score-bias: #f59e0b;     /* Yellow/Orange */
+  --score-manipulatif: #ef4444; /* Red */
+
+  /* Neo-Brutalism specific vars */
+  --border-thick: 4px;
+  --border-radius: 0px; /* Sharp corners */
+  --shadow-color: #111111;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif);
+}
+
+/* Typography Overrides for Neo-Brutalism */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900; /* Extra bold */
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+/* Neo-Brutalism Card */
+.brutal-card {
+  background: #ffffff;
+  border: var(--border-thick) solid var(--foreground);
+  border-radius: var(--border-radius);
+  box-shadow: 8px 8px 0px var(--shadow-color);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.brutal-card-hover:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--shadow-color);
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 14px 28px;
+  border: var(--border-thick) solid var(--foreground);
+  border-radius: var(--border-radius);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 6px 6px 0px var(--shadow-color);
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px var(--shadow-color);
+}
+
+.btn-primary:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px var(--shadow-color);
+}
+
+/* Ghost / Secondary Button */
+.btn-ghost {
+  background: transparent;
+  color: var(--foreground);
+  padding: 10px 20px;
+  border: 3px solid var(--foreground);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background: #e5e5e5;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--shadow-color);
+}
+
+.btn-ghost:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--shadow-color);
+}
+
+/* Input Area */
+.input-area {
+  background: #ffffff;
+  border: var(--border-thick) solid var(--foreground);
+  border-radius: var(--border-radius);
+  color: var(--foreground);
+  padding: 16px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  transition: all 0.1s ease;
+  resize: vertical;
+}
+
+.input-area:focus {
+  outline: none;
+  background: #ffffea; /* Slight yellow tint on focus */
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--shadow-color);
+}
+
+.input-area::placeholder {
+  color: #888888;
+  font-weight: 500;
+}
+
+/* Tabs */
+.tab-active {
+  background: var(--foreground);
+  color: #ffffff;
+  border: 3px solid var(--foreground);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tab-inactive {
+  background: #ffffff;
+  color: var(--foreground);
+  border: 3px solid var(--foreground);
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  transition: all 0.1s ease;
+}
+
+.tab-inactive:hover {
+  background: #f0f0f0;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--shadow-color);
+}
+
+/* Animations */
+@keyframes stamp-animation {
+  0% {
+    opacity: 0;
+    transform: scale(2) rotate(-15deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.9) rotate(8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(5deg);
+  }
+}
+
+.animate-stamp {
+  animation: stamp-animation 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 16px 24px;
+  border: var(--border-thick) solid var(--foreground);
+  font-weight: 700;
+  box-shadow: 8px 8px 0px var(--shadow-color);
+  z-index: 1000;
+}
+
+.toast-error {
+  background: var(--score-manipulatif);
+  color: #ffffff;
+}
+
+.toast-success {
+  background: var(--score-objektif);
+  color: #ffffff;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: #e5e5e5;
+  border: 2px solid var(--foreground);
+}
+
+/* Highlighting */
+.highlight-text {
+  background-color: var(--accent);
+  padding: 0 4px;
+  font-weight: 800;
+  border: 2px solid var(--foreground);
+}
