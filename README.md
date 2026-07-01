@@ -36,7 +36,7 @@
 
 ### 2. Clone Repository
 ```bash
-git clone https://github.com/USERNAME_ANDA/factguard.git
+git clone https://github.com/USERNAME_ANDA/CekFakta.git
 cd factguard
 ```
 
