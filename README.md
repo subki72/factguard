@@ -8,7 +8,7 @@
 </div>
 <br/>
 
-**FactGuard** adalah platform cerdas berbasis *Artificial Intelligence* (Generative AI) yang dirancang untuk membongkar narasi manipulatif, mendeteksi indikasi *buzzer*, dan mengukur tingkat objektivitas sebuah teks, artikel berita, maupun *screenshot* media sosial. Dibangun dengan antarmuka bergaya **Neo-Brutalism** yang berani dan modern.
+**CekFakta** adalah platform cerdas berbasis *Artificial Intelligence* (Generative AI) yang dirancang untuk membongkar narasi manipulatif, mendeteksi indikasi *buzzer*, dan mengukur tingkat objektivitas sebuah teks, artikel berita, maupun *screenshot* media sosial. Dibangun dengan antarmuka bergaya **Neo-Brutalism** yang berani dan modern.
 
 ## Fitur Utama
 
